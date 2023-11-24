@@ -1,7 +1,17 @@
 package com.cg.springbootrestfulwebservices.service;
 
 import com.cg.springbootrestfulwebservices.Entity.User;
+import com.cg.springbootrestfulwebservices.dto.UserDto;
+
+import java.util.List;
 
 public interface UserService {
-    User createUser(User user);
+    UserDto createUser(UserDto user);
+    UserDto getUserById(Long userId);
+
+    List<UserDto> getAllUsers();
+
+    UserDto updateUser(UserDto user);
+
+    void deleteUser(Long userId);
 }
